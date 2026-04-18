@@ -1,0 +1,66 @@
+<!-- <%- include("partials/header") %> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    body {
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+      height: 100vh;           /* full page height */
+      margin: 0;
+      background-color: #f0f8ff; /* light background */
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    div {
+      padding: 30px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #28a745; /* green for success */
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+    }
+   </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body clas="css">
+ <div class="container text-center">
+  <% const loc = (typeof location === 'string' ? location.trim() : ''); %>
+  <%  if(loc){%> 
+     <h1>Searching for movers in <%= location %>...</h1>
+     <h2>Please wait while we find the best options for you.</h2>
+     <p>You will be redirected to the homepage shortly.</p>
+   <%  } else {%>
+     <h1>Location not provided!</h1>
+     <h2>Please go back and enter a valid location.</h2>
+     <p>You will be redirected to the homepage shortly.</p>
+   <% } %>
+
+</div>
+  <script>
+    setTimeout(() => {
+      window.location.href = "/index"; 
+    }, 3200);
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
