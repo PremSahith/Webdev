@@ -1,0 +1,72 @@
+<p>in price</p>
+<!-- 
+    This EJS partial defines the confirmation modal structure. 
+    It is hidden by default and managed by JavaScript in index2.ejs.
+    The custom CSS has been moved to /public/styles/main.css to keep this partial clean.
+-->
+<link rel="stylesheet" href="/styles/main.css" />
+<div id="pricingModal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-header">
+      <h3 class="modal-title">Confirm Your Plan</h3>
+      <p class="modal-subtitle">
+        You are about to subscribe to the
+        <strong id="modalPlanName">Starter</strong> plan.
+      </p>
+    </div>
+
+    <div class="plan-summary">
+      <div class="summary-item">
+        <span>Selected Plan:</span>
+        <strong id="summaryPlanName">Starter</strong>
+      </div>
+      <div class="summary-item total">
+        <span>Monthly Price:</span>
+        <strong id="summaryPlanPrice">$29</strong>
+      </div>
+    </div>
+
+    <form class="checkout-form" action="/price" method="post">
+      <div class="form-group">
+        <label for="paymentName">Name on Card</label>
+        <input type="text" id="paymentName" placeholder="Full Name" required />
+      </div>
+      <div class="form-group">
+        <label for="cardNumber">Card Number</label>
+        <input
+          type="text"
+          id="cardNumber"
+          placeholder="•••• •••• •••• ••••"
+          maxlength="19"
+          required
+        />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="expiry">Expiry (MM/YY)</label>
+          <input
+            type="text"
+            id="expiry"
+            placeholder="01/26"
+            maxlength="5"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input
+            type="text"
+            id="cvv"
+            placeholder="123"
+            maxlength="4"
+            required
+          />
+        </div>
+      </div>
+      <button type="submit" class="submit-button cta-button">
+        Start <span id="checkoutPlanName">Starter</span> Subscription
+      </button>
+    </form>
+  </div>
+</div>
