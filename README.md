@@ -8,6 +8,7 @@ A structured collection of projects, exercises, and experiments built while lear
 
 ```
 webdev/
+├── frontend/         # HTML, CSS & JavaScript fundamentals and projects
 ├── backend/          # Node.js & Express backend exercises and projects
 ├── Api/              # API consumption & Axios exercises
 ├── Authentication/   # Authentication levels, sessions, cookies & security
@@ -18,6 +19,35 @@ webdev/
 ---
 
 ## 🗂️ Sections Overview
+
+### 🎨 Frontend (`/frontend`)
+
+Core web fundamentals covering HTML structure, CSS styling, JavaScript interactivity, Bootstrap, and the DOM.
+
+| Topic | Description |
+|---|---|
+| `1.0 Web Foundations` | How the web works, browsers and servers |
+| `1.1 HTML` | HTML document structure and basic tags |
+| `2.1 Heading Element` | HTML heading tags (`h1`–`h6`) |
+| `2.2 Paragraph Element` | `<p>` tags and text formatting |
+| `2.3 Void Elements` | Self-closing elements (`<br>`, `<hr>`, `<img>`) |
+| `3.0 CSS` | Introduction to Cascading Style Sheets |
+| `3.1 Inline & Internal CSS` | Styling methods and specificity |
+| `3.2 CSS Selectors` | Class, ID, and element selectors |
+| `4.0 Multipage Websites` | Linking pages and file structure |
+| `5.0 CSS Box Model` | Margin, padding, border and layout |
+| `5.1 CSS Display` | Block, inline, and inline-block |
+| `5.2 CSS Positioning` | Static, relative, absolute, fixed |
+| `6.0 Flexbox` | Flexible box layout system |
+| `6.1 Grid` | CSS Grid layout |
+| `7.0 Bootstrap` | Using the Bootstrap framework |
+| `7.1 Bootstrap Components` | Navbars, cards, buttons, modals |
+| `8.0 JavaScript` | JS fundamentals – variables, data types |
+| `8.1 DOM` | Manipulating the Document Object Model |
+| `8.2 Events` | Event listeners and handlers |
+| `8.3 jQuery` | DOM manipulation with jQuery |
+
+---
 
 ### 🖥️ Backend (`/backend`)
 
@@ -101,6 +131,11 @@ React.js fundamentals and component-driven UI development.
 
 | Technology | Purpose |
 |---|---|
+| **HTML5** | Web page structure and semantics |
+| **CSS3** | Styling, animations, Flexbox & Grid |
+| **JavaScript** | Frontend interactivity and DOM manipulation |
+| **Bootstrap** | Responsive UI component framework |
+| **jQuery** | Simplified DOM manipulation |
 | **Node.js** | JavaScript runtime for backend logic |
 | **Express.js** | Web framework for building REST APIs & servers |
 | **EJS** | Templating engine for server-rendered views |
