@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 60vh;">
+            <form action="/" method="get" style="display: flex; flex-direction: column; align-items: center; background: rgba(0,0,0,0.3); padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #000;">
+                <label for="city" style="color: #fff; font-weight: bold; font-size: 1.2em; text-align: center;">Enter city name:</label>
+                <input type="text" id="city" name="city" placeholder="e.g. London" value="<%= typeof city !== 'undefined' ? city : '' %>" required style="margin: 10px 0; padding: 8px; font-size: 1em; border-radius: 5px; border: 1px solid #fff; background: #333; color: #fff; text-align: center;">
+                <button type="submit" style="padding: 10px 20px; font-size: 1em; border-radius: 5px; border: none; background: #222; color: #fff; font-weight: bold; cursor: pointer; margin-top: 10px;">Get Weather</button>
+            </form>
+        </div>
+    <% if (weather && weather.main) { %>
+        <h2>Weather in <%= city %></h2>
+        <p>Temperature: <%= weather.main.temp %> °C</p>
+        <p>Feels Like: <%= weather.main.feels_like %> °C</p>
+        <p>Humidity: <%= weather.main.humidity %>%</p>
+        <p>Weather: <%= weather.weather[0].description %></p>
+        <p>Wind Speed: <%= weather.wind.speed %> m/s</p>
+        <p>Sunrise: <%= new Date(weather.sys.sunrise * 1000).toLocaleTimeString() %></p>
+        <p>Sunset: <%= new Date(weather.sys.sunset * 1000).toLocaleTimeString() %></p>
+    <% } else if (error) { %>
+        <p><%= error %></p>
+    <% } %>
+</body>
+</html>
